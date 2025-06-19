@@ -2,62 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhishek Singh Lodhi - Portfolio</title>
-  <link rel="stylesheet" href="portpolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portpolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 <body>
-  <header>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Abhishek</div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home">
     <div class="container">
-      <h1>Abhishek Singh Lodhi</h1>
-      <p>🚀 Full-Stack Java Developer | 📰 Journalist | 🌍 Traveler</p>
+      <div class="profile-image">
+        <img src="./abhi.png.png" alt="Abhishek Singh Lodhi">
+      </div>
+      <div class="intro-text">
+        <h1>Abhishek Singh Lodhi</h1>
+        <p><span>Java Developer | Journalist | Explorer</span></p>
+      </div>
     </div>
   </header>
 
-  <section class="about">
-    <div class="container">
-      <h2>✨ About Me</h2>
-      <p>
-        Hello! I'm a passionate software engineer and storyteller. With strong roots in Java full-stack development and media journalism, I love blending code with creativity. Whether it's building smart devices or reporting real stories, I do it with purpose.
-      </p>
-    </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate full-stack Java developer and journalist with a love for travel and creativity. I build apps and write stories that matter.</p>
   </section>
 
-  <section class="projects">
-    <div class="container">
-      <h2>💼 Projects</h2>
-      <div class="project-cards">
-        <div class="card">
-          <h3>Smart Fan Controller</h3>
-          <p>Temperature-based fan speed system using Arduino, DHT11, and LCD display.</p>
-        </div>
-        <div class="card">
-          <h3>News Blog App</h3>
-          <p>Web app with live article publishing and journalist access control.</p>
-        </div>
-        <div class="card">
-          <h3>Travel Portfolio</h3>
-          <p>Personal website to share travel stories, photos, and blog posts.</p>
-        </div>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Smart Fan Control</h3>
+        <p>IoT fan system that automatically adjusts speed based on room temperature.</p>
+      </div>
+      <div class="card">
+        <h3>News Blog App</h3>
+        <p>A simple CMS-powered blog where users can read and post news stories.</p>
+      </div>
+      <div class="card">
+        <h3>Travel Blog Website</h3>
+        <p>Showcasing personal travel experiences, photos and guides.</p>
       </div>
     </div>
   </section>
 
-  <section class="contact">
-    <div class="container">
-      <h2>📬 Contact Me</h2>
-      <p>📧 <a href="mailto:lodhiabhi.com@gmail.com">lodhiabhi.com@gmail.com</a></p>
-      <p>📱 +91-6261478016</p>
-      <div class="socials">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="https://www.instagram.com/_abhisheklodhi/">Instagram</a>
-      </div>
-    </div>
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:lodhiabhi.com@gmail.com">lodhiabhi.com@gmail.com</a></p>
+    <p>Phone: +91-6261478016</p>
+  <div class="social-links">
+  <a href="https://www.instagram.com/_abhisheklodhi" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+  <a href="https://wa.me/6261478016" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+</div>
+
+</div>
+
   </section>
 
   <footer>
-    <p>🌟 Made with ❤️ by Abhishek Singh Lodhi &copy; 2025</p>
+    <p>© 2025 Abhishek Singh Lodhi. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
 </body>
 </html>
